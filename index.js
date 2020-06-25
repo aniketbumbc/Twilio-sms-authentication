@@ -3,7 +3,6 @@ const app = express();
 const port = process.env.PORT || 3000;
 const config =require('./config');
 const client = require('twilio')(config.accountSID,config.authToken);
-
 //login  phonenumber, channel(sms/call)
 app.get('/login',(req, res)=>{
    client
@@ -32,5 +31,4 @@ app.get('/verify',(req, res)=>{
         res.status(200).send(data);
     })
  })
-
 app.listen(port, () => console.log(`listening on http://localhost:${port}`));
