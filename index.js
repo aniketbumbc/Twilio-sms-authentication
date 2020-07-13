@@ -17,7 +17,7 @@ app.get('/login',(req, res)=>{
        res.status(200).send(data);
    })
 })
-//verify ( phone number and code)
+//verify ( phone number and code verify)
 app.get('/verify',(req, res)=>{
     client
     .verify
@@ -30,5 +30,5 @@ app.get('/verify',(req, res)=>{
     .then((data)=>{
         res.status(200).send(data);
     })
- })
+})
 app.listen(port, () => console.log(`listening on http://localhost:${port}`));
